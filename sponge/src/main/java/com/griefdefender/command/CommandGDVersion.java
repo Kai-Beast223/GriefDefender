@@ -66,12 +66,20 @@ public class CommandGDVersion extends BaseCommand {
                 .append("Running ")
                 .append(permissionPlugin + " " + permissionVersion, TextColor.GREEN)
                 .build();
+        Component notLiable = TextComponent.builder("")
+                .append(GriefDefenderPlugin.GD_TEXT)
+                .append("This is a Community Built Version")
+                .append("BLOODSHOT HOLDS NO RESPONSIBILITY OR SUPPORT FOR THIS VERSION", TextColor.GREEN)
+                .build();
+
         TextAdapter.sendComponent(src, TextComponent.builder("")
                 .append(gpVersion)
                 .append("\n")
                 .append(spongeVersion)
                 .append("\n")
                 .append(permVersion)
+                .append("\n")
+                .append(notLiable)
                 .build());
     }
 }
